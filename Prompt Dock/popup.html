@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Prompt Dock</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header-controls">
+      <div class="header-wrapper">
+        <div class="social-icons">
+          <button id="vipBtn" class="social-btn vip-btn" title="VIP Prompts">
+            <i class="fas fa-crown"></i>
+          </button>
+          <button id="aboutBtn" class="social-btn" title="About">
+            <i class="fas fa-info-circle"></i>
+          </button>
+          <a href="https://github.com/promptdock" target="_blank" class="social-btn" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@PromptDock" target="_blank" class="social-btn" title="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://buymeacoffee.com/promptdock" target="_blank" class="social-btn" title="Buy Me a Coffee">
+            <i class="fas fa-coffee"></i>
+          </a>
+        </div>
+        <h1>Prompt Dock</h1>
+      </div>
+    </div>
+    
+    <div class="controls">
+      <select id="categorySelect">
+        <option value="General">General</option>
+      </select>
+      <input type="text" id="newFolder" placeholder="New folder">
+      <button id="addBtn" class="btn-green">Add</button>
+      <button id="deleteBtn" class="btn-red">Delete</button>
+    </div>
+    
+    <div class="prompt-form">
+      <input type="text" id="headingInput" placeholder="Heading">
+      <textarea id="contentInput" placeholder="Content"></textarea>
+      <input type="text" id="tagsInput" placeholder="Save with tags">
+      <button id="savePrompt" class="btn-save">Save Prompt</button>
+    </div>
+
+    <div class="search-section expanded">
+      <h2>Search Prompts</h2>
+      <div class="search-section-content">
+        <input type="text" id="searchInput" placeholder="Search saved prompts...">
+        <input type="text" id="tagSearchInput" placeholder="Search by tags...">
+        
+        <div class="export-import">
+          <button id="exportBtn" class="btn-green">Export</button>
+          <button id="importBtn" class="btn-green">Import</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="promptList"></div>
+  </div>
+  <script src="vip.js"></script>
+  <script src="share.js"></script>
+  <script src="shortcuts.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
